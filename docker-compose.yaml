@@ -1,24 +1,27 @@
 services:
    nextjs:
       build: .
-      container_name: edservicetx
-      restart: always
+      container_name: nextjs-app
       ports:
          - "3000:3000"
       networks:
-         - nextjs-app
+         - app_network
+      restart: always
    nginx:
       image: nginx:latest
-      container_name: edservicetx_nginx
-      restart: always
+      container_name: nginx-proxy
+
       ports:
          - "80:80"
       volumes:
          - ./nginx.conf:/etc/nginx/nginx.conf
+         - ./certbot/conf:/etc/letsencrypt # config for certbot certificates
+         - ./certbot/www:/var/www/certbot # for certbot challenge
       depends_on:
          - nextjs
       networks:
-         - nextjs-app
+         - app_network
+      restart: always
    certbot:
       image: certbot/certbot
       container_name: certbot
@@ -28,7 +31,7 @@ services:
       depends_on:
          - nginx
       networks:
-         - nextjs-app
+         - app_network
 networks:
-   nextjs-app:
+   app_network:
       driver: bridge
