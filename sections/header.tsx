@@ -17,7 +17,9 @@ export default function Header() {
          <div className="py-6">
             <div className="container mx-auto flex items-center justify-between">
                <div className="logo">
-                  <Image src={LogoBlack} alt="logo" height={40} />
+                  <a href="/">
+                     <Image src={LogoBlack} alt="logo" height={40} />
+                  </a>
                </div>
                <div className="menu">
                   <nav className="hidden md:flex gap-8 items-center">

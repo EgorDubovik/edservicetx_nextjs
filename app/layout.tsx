@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -13,25 +12,6 @@ const geistMono = Geist_Mono({
    variable: "--font-geist-mono",
    subsets: ["latin"],
 });
-
-export const metadata: Metadata = {
-   title: "Appliance Repair in Plano, Frisco, McKinney & Allen | Fast & Reliable",
-   description:
-      "Need reliable appliance repair in Plano, Frisco, McKinney, or Allen? We provide fast and professional service for ovens, refrigerators, dishwashers, and more!",
-   robots: "index, follow",
-   alternates: {
-      canonical: "https://edservicetx.com/",
-   },
-   openGraph: {
-      title: "Appliance Repair in Plano, Frisco, McKinney & Allen | Fast & Reliable",
-      description:
-         "Expert appliance repair services in Plano, Frisco, McKinney, and Allen. We fix refrigerators, ovens, dishwashers, and more. Fast, reliable, and affordable!",
-      url: "https://edservicetx.com/",
-      siteName: "EDService appliance repair",
-
-      type: "website",
-   },
-};
 
 export default function RootLayout({
    children,
