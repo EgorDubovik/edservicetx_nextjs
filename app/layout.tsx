@@ -25,7 +25,7 @@ export default function RootLayout({
             <Script
                id="local-business-jsonld"
                type="application/ld+json"
-               strategy="afterInteractive"
+               strategy="beforeInteractive"
                dangerouslySetInnerHTML={{
                   __html: JSON.stringify({
                      "@context": "https://schema.org",
@@ -55,6 +55,7 @@ export default function RootLayout({
             />
             <Script
                id="google-tag-manager"
+               strategy="beforeInteractive"
                dangerouslySetInnerHTML={{
                   __html: `
                      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
