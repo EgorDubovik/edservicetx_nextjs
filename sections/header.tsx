@@ -6,19 +6,19 @@ import MenuIcon from "@mui/icons-material/Menu";
 export default function Header() {
    return (
       <header className="sticky top-0 z-50 bg-white">
-         <div className="bg-[#04122c] py-2 text-white text-lg">
+         {/* <div className="bg-[#04122c] py-2 text-white text-lg">
             <div className="container mx-auto flex items-center justify-center md:justify-end">
                Call us today:{" "}
                <a href={`tel:${APP_CONFIG.PHONE_NUMBER}`} className="ml-2">
                   {APP_CONFIG.PHONE_NUMBER}
                </a>
             </div>
-         </div>
+         </div> */}
          <div className="py-6">
             <div className="container mx-auto flex items-center justify-between">
                <div className="logo">
                   <a href="/">
-                     <Image src={LogoBlack} alt="logo" height={40} />
+                     <Image src={LogoBlack} alt="logo" height={50} />
                   </a>
                </div>
                <div className="menu">

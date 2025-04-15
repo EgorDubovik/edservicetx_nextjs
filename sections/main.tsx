@@ -9,7 +9,7 @@ export default function Main() {
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="text-center md:text-left">
                   <h1
-                     className="text-5xl md:text-6xl font-semibold "
+                     className="text-5xl md:text-6xl font-semibold text-gray-800"
                      style={{ lineHeight: 1.2 }}
                   >
                      Home Appliance Repair Service

@@ -15,10 +15,10 @@ export default function Benefits() {
                <div className="w-[200px] border-b border-gray-400 mx-auto my-4"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 py-6">
-               <div className="text-center px-4 mt-4 md:mt-0">
+               <div className="text-center px-4 py-4 mt-4 md:mt-0 rounded-md hover:shadow-lg hover:scale-125 transition-all duration-500">
                   <SpaOutlinedIcon
                      style={{ fontSize: 50 }}
-                     className="text-gray-700 mb-4"
+                     className="text-green-700 mb-4"
                   />
                   <h2 className="text-xl font-semibold text-gray-800">
                      High quality
@@ -28,10 +28,10 @@ export default function Benefits() {
                      highest quality work
                   </p>
                </div>
-               <div className="text-center px-4 mt-4 md:mt-0">
+               <div className="text-center px-4 py-4 mt-4 md:mt-0 rounded-md hover:shadow-lg hover:scale-125 transition-all duration-500">
                   <EngineeringOutlinedIcon
                      style={{ fontSize: 50 }}
-                     className="text-gray-700 mb-4"
+                     className="text-blue-700 mb-4"
                   />
                   <h2 className="text-xl font-semibold text-gray-800">
                      Experienced Technicians
@@ -41,10 +41,10 @@ export default function Benefits() {
                      experience in appliance repair.
                   </p>
                </div>
-               <div className="text-center px-4 mt-4 md:mt-0">
+               <div className="text-center px-4 py-4 mt-4 md:mt-0 rounded-md hover:shadow-lg hover:scale-125 transition-all duration-500">
                   <SettingsSuggestOutlinedIcon
                      style={{ fontSize: 50 }}
-                     className="text-gray-700 mb-4"
+                     className="text-orange-700 mb-4"
                   />
                   <h2 className="text-xl font-semibold text-gray-800">
                      Fast & Reliable Service
@@ -54,10 +54,10 @@ export default function Benefits() {
                      without compromising quality.
                   </p>
                </div>
-               <div className="text-center px-4 mt-4 md:mt-0">
+               <div className="text-center px-4 py-4 mt-4 md:mt-0 rounded-md hover:shadow-lg hover:scale-125 transition-all duration-500">
                   <SupportAgentOutlinedIcon
                      style={{ fontSize: 50 }}
-                     className="text-gray-700 mb-4"
+                     className="text-purple-700 mb-4"
                   />
                   <h2 className="text-xl font-semibold text-gray-800">
                      Customer Satisfaction

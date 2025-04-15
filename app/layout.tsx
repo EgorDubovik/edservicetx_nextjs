@@ -1,16 +1,12 @@
 import Script from "next/script";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import { APP_CONFIG } from "../config/config";
 
-const geistSans = Geist({
-   variable: "--font-geist-sans",
+const roboto = Roboto({
+   variable: "--font-roboto",
    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-   variable: "--font-geist-mono",
-   subsets: ["latin"],
+   weight: ["100", "300", "400", "500", "700", "900"],
 });
 
 export default function RootLayout({
@@ -67,9 +63,7 @@ export default function RootLayout({
                }}
             />
          </head>
-         <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-         >
+         <body className={`${roboto.variable} antialiased`}>
             {/* Add the Google Tag Manager noscript code */}
             <noscript>
                <iframe
