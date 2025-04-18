@@ -25,7 +25,7 @@ export default function Main() {
                   <div className="py-10 flex items-center justify-center md:justify-start">
                      <a
                         href={APP_CONFIG.BOOK_APP_URL}
-                        className="btn-call text-lg md:text-2xl flex items-center justify-center"
+                        className="btn-call text-[25px] md:text-2xl flex items-center justify-center"
                      >
                         <LocalPhoneIcon className="mr-2" />
                         {APP_CONFIG.PHONE_NUMBER}

@@ -11,6 +11,7 @@ import Benefits from "../sections/benefits";
 import Review from "../sections/review";
 
 import type { Metadata } from "next";
+import NewContactForm from "@/sections/newcontactform";
 
 export const metadata: Metadata = {
    title: "Appliance Repair in Plano, Frisco, McKinney & Allen | Fast & Reliable",
@@ -51,8 +52,9 @@ export default function Home() {
          <Benefits />
          <GallerySection />
          <Review />
-         <Contact />
-         <BottomCard />
+         <NewContactForm />
+         {/* <Contact /> */}
+         {/* <BottomCard /> */}
          <Footer />
       </div>
    );

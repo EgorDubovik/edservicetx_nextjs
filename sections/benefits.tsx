@@ -68,10 +68,10 @@ export default function Benefits() {
                   </p>
                </div>
             </div>
-            <div className="py-5 flex items-center justify-center mt-10">
-               <h1 className="text-2xl ">Call us today </h1>
+            <div className="py-5 flex flex-col md:flex-row items-center justify-center mt-2 md:mt-10 gap-6">
+               <h1 className="text-2xl">Call us today </h1>
                <a
-                  className="btn-call ml-6 text-xl"
+                  className="btn-call text-xl flex items-center"
                   href={`tel:${APP_CONFIG.PHONE_NUMBER}`}
                >
                   <LocalPhoneIcon className="mr-2" />
