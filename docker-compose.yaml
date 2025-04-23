@@ -1,12 +1,19 @@
 services:
    nextjs:
-      build: .
+      build:
+         context: .
+         dockerfile: ${DOCKER_FILE}
       container_name: nextjs-app
       ports:
-         - "3000:3000"
+         - "3001:3001"
       networks:
          - app_network
+      volumes:
+         - .:/app
+         - /app/node_modules
+         - /app/.next
       restart: always
+
    nginx:
       image: nginx:latest
       container_name: nginx-proxy
@@ -22,6 +29,8 @@ services:
          - nextjs
       networks:
          - app_network
+      deploy:
+         replicas: ${NGINX_ENABLED:-1}
       restart: always
    certbot:
       image: certbot/certbot
@@ -33,6 +42,7 @@ services:
          - nginx
       networks:
          - app_network
+
 networks:
    app_network:
       driver: bridge

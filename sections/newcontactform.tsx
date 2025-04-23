@@ -4,6 +4,7 @@ import { APP_CONFIG } from "@/config/config";
 import { Email, Map, Phone } from "@mui/icons-material";
 import LogoBlack from "../public/logo4_black.png";
 import Image from "next/image";
+import handleClick from "@/app/lib/call-api";
 
 export default function NewContactForm() {
    const [formData, setFormData] = useState({
@@ -69,7 +70,12 @@ export default function NewContactForm() {
                            />
                            <div className="ml-4">
                               <div className="font-bold">Call us</div>
-                              <a href={`tel:${APP_CONFIG.PHONE_NUMBER}`}>
+                              <a
+                                 href={`tel:${APP_CONFIG.PHONE_NUMBER}`}
+                                 onClick={() =>
+                                    handleClick("btn-call-callsection")
+                                 }
+                              >
                                  {APP_CONFIG.PHONE_NUMBER}
                               </a>
                            </div>

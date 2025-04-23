@@ -1,9 +1,11 @@
+"use client";
 import SpaOutlinedIcon from "@mui/icons-material/SpaOutlined";
 import EngineeringOutlinedIcon from "@mui/icons-material/EngineeringOutlined";
 import SettingsSuggestOutlinedIcon from "@mui/icons-material/SettingsSuggestOutlined";
 import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
 import { APP_CONFIG } from "../config/config";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import handleClick from "@/app/lib/call-api";
 export default function Benefits() {
    return (
       <section className="py-10 bg-white">
@@ -73,6 +75,7 @@ export default function Benefits() {
                <a
                   className="btn-call text-xl flex items-center"
                   href={`tel:${APP_CONFIG.PHONE_NUMBER}`}
+                  onClick={() => handleClick("btn-call-benefits")}
                >
                   <LocalPhoneIcon className="mr-2" />
                   {APP_CONFIG.PHONE_NUMBER}
@@ -84,6 +87,7 @@ export default function Benefits() {
                   <a
                      className="text-orange-700 text-xl border-b border-orange-700 py-2"
                      href={APP_CONFIG.BOOK_APP_URL}
+                     onClick={() => handleClick("btn-book-benefits")}
                   >
                      Book appointment online
                   </a>

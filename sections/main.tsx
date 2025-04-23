@@ -1,7 +1,10 @@
+"use client";
 import { APP_CONFIG } from "@/config/config";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import Image from "next/image";
 import master from "../public/master2.png";
+import handleClick from "@/app/lib/call-api";
+
 export default function Main() {
    return (
       <section className="py-10 md:py-20 bg-gradient-to-b from-[#fff] to-[#b5dfff]">
@@ -24,8 +27,9 @@ export default function Main() {
                   </p>
                   <div className="py-10 flex items-center justify-center md:justify-start">
                      <a
-                        href={APP_CONFIG.BOOK_APP_URL}
+                        href={`tel:${APP_CONFIG.PHONE_NUMBER}`}
                         className="btn-call text-[25px] md:text-2xl flex items-center justify-center"
+                        onClick={() => handleClick("btn-call-main")}
                      >
                         <LocalPhoneIcon className="mr-2" />
                         {APP_CONFIG.PHONE_NUMBER}

@@ -1,6 +1,8 @@
+"use client";
+
 import { BookOnline, Email, Phone } from "@mui/icons-material";
 import { APP_CONFIG } from "../config/config";
-
+import handleClick from "@/app/lib/call-api";
 export default function Footer() {
    return (
       <footer className="bg-gray-900 text-white">
@@ -12,13 +14,18 @@ export default function Footer() {
                      target="_blank"
                      href={APP_CONFIG.BOOK_APP_URL}
                      className="ml-2"
+                     onClick={() => handleClick("btn-book-footer")}
                   >
                      Book appointment online
                   </a>
                </div>
                <div className="py-4 border-y md:border-x border-gray-600">
                   <Phone />
-                  <a href={`tel:${APP_CONFIG.PHONE_NUMBER}`} className="ml-2">
+                  <a
+                     href={`tel:${APP_CONFIG.PHONE_NUMBER}`}
+                     className="ml-2"
+                     onClick={() => handleClick("btn-call-footer")}
+                  >
                      {APP_CONFIG.PHONE_NUMBER}
                   </a>
                </div>

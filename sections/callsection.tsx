@@ -1,3 +1,5 @@
+"use client";
+import handleClick from "@/app/lib/call-api";
 import { APP_CONFIG } from "@/config/config";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
@@ -18,6 +20,7 @@ export default function CallSection() {
                <div className="text-white flex items-center justify-center md:justify-end gap-2">
                   <a
                      href={`tel:${APP_CONFIG.PHONE_NUMBER}`}
+                     onClick={() => handleClick("btn-call-callsection")}
                      className="flex items-center text-[32px] gap-2 border text-blue-700 border-white bg-white rounded-lg px-4 py-2"
                   >
                      <LocalPhoneIcon style={{ fontSize: 34 }} />
