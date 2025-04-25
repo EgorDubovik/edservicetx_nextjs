@@ -31,8 +31,8 @@ export default function Services() {
                            />
                         </div>
                         <div className="text-left col-span-2">
-                           <h2 className="text-xl font-semibold">
-                              Appliance Installation
+                           <h2 className="text-2xl font-semibold text-gray-800">
+                              Installation
                            </h2>
 
                            <p className="text-gray-500 mt-4">
@@ -51,8 +51,8 @@ export default function Services() {
                            />
                         </div>
                         <div className="text-left col-span-2">
-                           <h2 className="text-xl font-semibold">
-                              Appliance Repair
+                           <h2 className="text-2xl text-gray-800 font-semibold">
+                              Repair
                            </h2>
 
                            <p className="text-gray-500 mt-4">
@@ -71,8 +71,8 @@ export default function Services() {
                            />
                         </div>
                         <div className="text-left col-span-2">
-                           <h2 className="text-xl font-semibold">
-                              Appliance Maintenance
+                           <h2 className="text-2xl text-gray-800 font-semibold">
+                              Maintenance
                            </h2>
 
                            <p className="text-gray-500 mt-4">

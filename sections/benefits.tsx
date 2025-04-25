@@ -6,6 +6,7 @@ import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
 import { APP_CONFIG } from "../config/config";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import handleClick from "@/app/lib/call-api";
+import { BookOnline, BookTwoTone, Event } from "@mui/icons-material";
 export default function Benefits() {
    return (
       <section className="py-10 bg-white">
@@ -70,7 +71,49 @@ export default function Benefits() {
                   </p>
                </div>
             </div>
-            <div className="py-5 flex flex-col md:flex-row items-center justify-center mt-2 md:mt-10 gap-6">
+
+            <div className="flex flex-col md:flex-row items-center justify-center gap-x-6 gap-y-10 mt-4 md:mt-10">
+               <div className="call-conteiner flex flex-col gap-y-6 items-center shadow-lg py-4 w-[400px] rounded border ">
+                  <div className="flex items-center">
+                     <LocalPhoneIcon
+                        className="text-blue-700"
+                        style={{ fontSize: 50 }}
+                     />
+                  </div>
+                  <div className="text-center text-xl">Call us today</div>
+                  <div className="flex items-center">
+                     <a
+                        className="btn-call text-xl flex items-center"
+                        href={`tel:${APP_CONFIG.PHONE_NUMBER}`}
+                        onClick={() => handleClick("btn-call-benefits")}
+                     >
+                        {APP_CONFIG.PHONE_NUMBER}
+                     </a>
+                  </div>
+                  <p className="text-gray-500 text-sm">
+                     Call today before noon - same day repair
+                  </p>
+               </div>
+               <div className="book-conteiner flex flex-col gap-y-6 items-center shadow-lg py-4 w-[400px] rounded border ">
+                  <Event style={{ fontSize: 50 }} className="text-orange-700" />
+                  <div className="text-center text-xl">Book appointment</div>
+                  <div className="flex items-center">
+                     <a
+                        target="_blank"
+                        href={APP_CONFIG.BOOK_APP_URL}
+                        onClick={() => handleClick("btn-book-benefits")}
+                        className="btn-book text-xl flex items-center"
+                     >
+                        Book appointment online
+                     </a>
+                  </div>
+                  <p className="text-gray-500 text-sm">
+                     Available time for today
+                  </p>
+               </div>
+            </div>
+
+            {/* <div className="py-5 flex flex-col md:flex-row items-center justify-center mt-2 md:mt-10 gap-6">
                <h1 className="text-2xl">Call us today </h1>
                <a
                   className="btn-call text-xl flex items-center"
@@ -92,7 +135,7 @@ export default function Benefits() {
                      Book appointment online
                   </a>
                </p>
-            </div>
+            </div> */}
          </div>
       </section>
    );

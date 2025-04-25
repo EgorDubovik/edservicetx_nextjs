@@ -32,12 +32,11 @@ export default function Main() {
                      </a>
                   </div>
                </div>
-               <div className="relative">
+               <div className="">
                   <Image
                      src={WasherImage}
-                     alt="washer"
-                     height={600}
-                     className="absolute top-[-50px]"
+                     alt="washer repair master"
+                     height={500}
                   />
                </div>
             </div>

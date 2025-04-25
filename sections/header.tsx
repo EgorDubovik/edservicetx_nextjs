@@ -15,11 +15,31 @@ export default function Header() {
                   </a>
                </div>
                <div className="menu">
-                  <nav className="hidden md:flex gap-8 items-center">
-                     <a href="#services">Services</a>
-                     <a href="#repairs">Locations</a>
-                     <a href="#gallery">Gallery</a>
-                     <a href="#contact">Contact</a>
+                  <nav className="hidden md:flex items-center">
+                     <a
+                        href="#services"
+                        className="py-2 px-4 hover:bg-gray-100 rounded"
+                     >
+                        Services
+                     </a>
+                     <a
+                        href="#repairs"
+                        className="py-2 px-4 hover:bg-gray-100 rounded"
+                     >
+                        Locations
+                     </a>
+                     <a
+                        href="#gallery"
+                        className="py-2 px-4 hover:bg-gray-100 rounded"
+                     >
+                        Gallery
+                     </a>
+                     <a
+                        href="#contact"
+                        className="py-2 px-4 hover:bg-gray-100 rounded"
+                     >
+                        Contact
+                     </a>
                      <a
                         target="_blank"
                         href={APP_CONFIG.BOOK_APP_URL}

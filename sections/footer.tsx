@@ -19,7 +19,7 @@ export default function Footer() {
                      Book appointment online
                   </a>
                </div>
-               <div className="py-4 border-y md:border-x border-gray-600">
+               <div className="py-4 border-y md:border-y-0 md:border-x border-gray-600">
                   <Phone />
                   <a
                      href={`tel:${APP_CONFIG.PHONE_NUMBER}`}

@@ -1,4 +1,9 @@
 const handleClick = async (buttonId: string) => {
+   const time = new Date().toLocaleString("sv-SE", {
+      hour12: false,
+      timeZoneName: undefined,
+   });
+   console.log("Time:", time);
    const response = await fetch(process.env.NEXT_PUBLIC_API_URL + "/landing", {
       method: "POST",
       headers: {
@@ -7,7 +12,7 @@ const handleClick = async (buttonId: string) => {
       },
       body: JSON.stringify({
          action: buttonId,
-         timestamp: new Date().toISOString(),
+         timestamp: time,
          referer: document.referrer,
       }),
    });

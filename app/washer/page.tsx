@@ -8,6 +8,8 @@ import BottomCard from "../../sections/bottomCard";
 import Brands from "../../sections/components/brands";
 import Explanations from "./components/explanations";
 import type { Metadata } from "next";
+import NewContactForm from "@/sections/newcontactform";
+import Benefits from "@/sections/benefits";
 
 export const metadata: Metadata = {
    title: "Washer Repair in Plano, Frisco, McKinney & Allen | Fast & Reliable",
@@ -46,8 +48,9 @@ export default function Washer() {
          <Explanations />
          <LocationSection />
          <CallSection />
-         <Contact />
-         <BottomCard />
+         <Benefits />
+         <NewContactForm />
+
          <Footer />
       </div>
    );
