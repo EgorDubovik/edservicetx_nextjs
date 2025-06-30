@@ -5,9 +5,28 @@ import Image from "next/image";
 import master from "../public/master2.png";
 import handleClick from "@/app/lib/call-api";
 
+const pulsAnimation = `
+@keyframes puls-animation {
+   0% {
+      transform: scale(1);
+   }
+   50% {
+      transform: scale(1.05);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+.puls-animation {
+   animation: puls-animation 2s infinite;
+}
+`;
+
 export default function Main() {
    return (
       <section className="py-10 md:py-20 bg-gradient-to-b from-[#fff] to-[#b5dfff]">
+         <style>{pulsAnimation}</style>
          <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="text-center md:text-left">
@@ -28,7 +47,7 @@ export default function Main() {
                   <div className="py-10 flex items-center justify-center md:justify-start">
                      <a
                         href={`tel:${APP_CONFIG.PHONE_NUMBER}`}
-                        className="btn-call text-[25px] md:text-2xl flex items-center justify-center"
+                        className="btn-call text-[25px] md:text-2xl flex items-center justify-center puls-animation"
                         onClick={() => handleClick("btn-call-main")}
                      >
                         <LocalPhoneIcon className="mr-2" />

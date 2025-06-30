@@ -7,7 +7,7 @@ import Footer from "../sections/footer";
 import GallerySection from "../sections/gallery";
 import Benefits from "../sections/benefits";
 import Review from "../sections/review";
-
+import SmallBenefints from "../sections/components/smallBenefints";
 import type { Metadata } from "next";
 import NewContactForm from "@/sections/newcontactform";
 
@@ -44,6 +44,7 @@ export default function Home() {
       <div>
          <Header />
          <Main />
+         <SmallBenefints />
          <Services />
          <CallSection />
          <LocationSection />
