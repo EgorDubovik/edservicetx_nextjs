@@ -9,9 +9,8 @@ services:
       networks:
          - app_network
       volumes:
-         - .:/app
          - /app/node_modules
-         - /app/.next
+
       restart: always
 
    nginx:
