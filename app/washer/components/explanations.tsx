@@ -17,7 +17,7 @@ export default function Explanations() {
                      <li>Leaks and water damage</li>
                      <li>Noisy operation</li>
                      <li>Failure to spin or drain</li>
-                     <li>Not heating or cooling properly</li>
+                     <li>Not turning on</li>
                      <li>Broken or worn out parts</li>
                   </ul>
                </div>
@@ -32,7 +32,7 @@ export default function Explanations() {
                   <ul className="list-disc list-inside">
                      <li>No heat or not drying properly</li>
                      <li>Unusual noises or vibrations</li>
-                     <li>Leaks and water damage</li>
+                     <li>Not heating or cooling properly</li>
                      <li>Not spinning or turning</li>
                      <li>Broken or worn out parts</li>
                   </ul>
