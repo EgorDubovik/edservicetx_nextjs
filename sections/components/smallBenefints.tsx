@@ -26,7 +26,7 @@ const SmallBenefints = () => {
                <div className="flex justify-center">
                   <span className="text-gray-700 font-medium flex items-center">
                      <CheckCircle className="text-green-500 mr-2" />
-                     1-Year Warranty
+                     90 days / 180 days or 1 year Warranty
                   </span>
                </div>
                <div className="flex justify-center">
