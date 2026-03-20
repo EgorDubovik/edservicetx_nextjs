@@ -38,21 +38,6 @@ export default function Explanations() {
                   </ul>
                </div>
             </div>
-            <div className="text-center pt-20 text-lg text-gray-600">
-               <a
-                  href={APP_CONFIG.BOOK_APP_URL}
-                  className="mr-2 text-orange-600"
-               >
-                  Book appointment today
-               </a>
-               or call us at
-               <a
-                  href={`tel:${APP_CONFIG.PHONE_NUMBER}`}
-                  className="ml-2 text-blue-600"
-               >
-                  {APP_CONFIG.PHONE_NUMBER}
-               </a>
-            </div>
          </div>
       </section>
    );

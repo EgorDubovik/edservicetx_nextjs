@@ -86,163 +86,114 @@ export default function Services() {
             </div>
          </div>
          <Brands />
-         <div className="services pt-0 md:pt-10">
+         <div className="pt-6 pb-16">
             <div className="container">
-               {/* FOR MOBILE */}
-               <div className="flex flex-col md:hidden px-4 gap-10">
-                  <div className="flex items-center justify-between w-full">
-                     <div className="w-[220px]">
-                        <h1 className="text-2xl">Washer Dryer Repair</h1>
-                        <p className="text-blue-500 mt-4 text-right">
-                           Read more <ArrowRight />
-                        </p>
-                     </div>
-                     <LocalLaundryService
-                        style={{ fontSize: 60 }}
-                        className="text-blue-500"
-                     />
-                  </div>
-                  <div className="flex items-center justify-between w-full ">
-                     <div className="w-[220px]">
-                        <h1 className="text-2xl">Refrigerator Repair</h1>
-                        <p className="text-blue-500 mt-4 text-right">
-                           Read more <ArrowRight />
-                        </p>
-                     </div>
-                     <Kitchen
-                        style={{ fontSize: 60 }}
-                        className="text-blue-500"
-                     />
-                  </div>
-                  <div className="flex items-center justify-between w-full ">
-                     <div className="w-[220px]">
-                        <h1 className="text-2xl">Dishwasher Repair</h1>
-                        <p className="text-blue-500 mt-4 text-right">
-                           Read more <ArrowRight />
-                        </p>
-                     </div>
-                     <Countertops
-                        style={{ fontSize: 60 }}
-                        className="text-blue-500"
-                     />
-                  </div>
-                  <div className="flex items-center justify-between w-full ">
-                     <div className="w-[220px]">
-                        <h1 className="text-2xl">
-                           Stove, Oven & Cooktop Repair
-                        </h1>
-                        <p className="text-blue-500 mt-4 text-right">
-                           Read more <ArrowRight />
-                        </p>
-                     </div>
-                     <Microwave
-                        style={{ fontSize: 60 }}
-                        className="text-blue-500"
-                     />
-                  </div>
-               </div>
+               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-               {/* FOR DESKTOP */}
-               <div className=" grid-cols-2 gap-y-4 hidden md:grid">
-                  <div className="flex flex-row justify-end ">
-                     <div className="px-10 text-right min-w-[350px]">
-                        <h2 className="text-2xl">Washer Dryer Repair</h2>
-                        <p className="text-gray-500 mt-4 max-w-[500px]">
-                           We will diagnose the issue and provide you with a
-                           written estimate for the repair. We can fix any type
-                           and brand of washer and dryer, including front load,
-                           top load, gas, electric, and high efficiency models.
-                           From leaky hoses to faulty thermostats, our expert
-                           technicians have the knowledge and parts to get your
-                           laundry room back up and running.
-                        </p>
-                        <p className="mt-2 text-blue-500 text-right">
-                           <a href="/washer">
-                              Read more <ArrowRight />
-                           </a>
-                        </p>
+                  {/* Washer & Dryer */}
+                  <a
+                     href="/washer"
+                     className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden"
+                  >
+                     <div className="flex items-center justify-center py-8 bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
+                        <LocalLaundryService
+                           style={{ fontSize: 64 }}
+                           className="text-blue-500"
+                        />
                      </div>
-                  </div>
-                  <div className="pl-20 items-center justify-start flex">
-                     <LocalLaundryService
-                        style={{ fontSize: 100 }}
-                        className="text-blue-500"
-                     />
-                  </div>
-                  <div className="flex items-center justify-end pr-20">
-                     <Kitchen
-                        style={{ fontSize: 100 }}
-                        className="text-blue-500"
-                     />
-                  </div>
-                  <div className="flex justify-start pt-10">
-                     <div className="px-10 text-left min-w-[350px]">
-                        <h2 className="text-2xl">Refrigerator Repair</h2>
-                        <p className="text-gray-500 mt-4 max-w-[500px]">
-                           We will diagnose the issue and provide you with a
-                           written estimate for the repair. We can fix any type
-                           and brand of refrigerator, including side-by-side,
-                           bottom freezer, top freezer, French door, and compact
-                           models. From leaky doors to faulty compressors, our
-                           expert technicians have the knowledge and parts to
-                           get your refrigerator back up and running.
+                     <div className="flex flex-col flex-1 p-6">
+                        <h2 className="text-xl font-semibold text-gray-800 mb-3">
+                           Washer &amp; Dryer Repair
+                        </h2>
+                        <p className="text-gray-500 text-sm leading-relaxed flex-1">
+                           Front load, top load, gas &amp; electric — we fix
+                           leaks, spin issues, no heat, and more for all major
+                           brands.
                         </p>
-                        <p className="mt-2 text-blue-500 text-right">
-                           <a href="/washer">
-                              Read more <ArrowRight />
-                           </a>
-                        </p>
+                        <span className="mt-5 inline-flex items-center text-blue-500 font-medium text-sm group-hover:gap-2 transition-all duration-200">
+                           Learn more <ArrowRight fontSize="small" className="ml-1" />
+                        </span>
                      </div>
-                  </div>
+                  </a>
 
-                  <div className="flex mt-6 md:mt-0 flex-row justify-end">
-                     <div className="px-10 text-right min-w-[350px]">
-                        <h2 className="text-2xl">Dishwasher Repair</h2>
-                        <p className="text-gray-500 mt-4 max-w-[500px]">
-                           Is your dishwasher leaving dishes dirty, not
-                           draining, or making strange noises? We’re here to
-                           help! Our experienced technicians specialize in
-                           diagnosing and repairing all major dishwasher brands
+                  {/* Refrigerator */}
+                  <a
+                     href="/refrigerator"
+                     className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden"
+                  >
+                     <div className="flex items-center justify-center py-8 bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
+                        <Kitchen
+                           style={{ fontSize: 64 }}
+                           className="text-blue-500"
+                        />
+                     </div>
+                     <div className="flex flex-col flex-1 p-6">
+                        <h2 className="text-xl font-semibold text-gray-800 mb-3">
+                           Refrigerator Repair
+                        </h2>
+                        <p className="text-gray-500 text-sm leading-relaxed flex-1">
+                           French door, side-by-side, bottom freezer. LG
+                           Linear Compressor specialists. Ice maker, cooling
+                           &amp; water dispenser repair.
+                        </p>
+                        <span className="mt-5 inline-flex items-center text-blue-500 font-medium text-sm group-hover:gap-2 transition-all duration-200">
+                           Learn more <ArrowRight fontSize="small" className="ml-1" />
+                        </span>
+                     </div>
+                  </a>
+
+                  {/* Dishwasher */}
+                  <a
+                     href="/dishwasher"
+                     className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden"
+                  >
+                     <div className="flex items-center justify-center py-8 bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
+                        <Countertops
+                           style={{ fontSize: 64 }}
+                           className="text-blue-500"
+                        />
+                     </div>
+                     <div className="flex flex-col flex-1 p-6">
+                        <h2 className="text-xl font-semibold text-gray-800 mb-3">
+                           Dishwasher Repair
+                        </h2>
+                        <p className="text-gray-500 text-sm leading-relaxed flex-1">
+                           Dishes not clean, won&apos;t drain, strange noises?
+                           We diagnose and repair all major dishwasher brands
                            and models.
                         </p>
-                        <p className="mt-2 text-blue-500 text-right ">
-                           <a href="/washer">
-                              Read more <ArrowRight />
-                           </a>
-                        </p>
+                        <span className="mt-5 inline-flex items-center text-blue-500 font-medium text-sm group-hover:gap-2 transition-all duration-200">
+                           Learn more <ArrowRight fontSize="small" className="ml-1" />
+                        </span>
                      </div>
-                  </div>
-                  <div className="pl-20 items-center flex ">
-                     <Countertops
-                        style={{ fontSize: 100 }}
-                        className="text-blue-500"
-                     />
-                  </div>
-                  <div className="flex items-center justify-end pr-20">
-                     <Microwave
-                        style={{ fontSize: 100 }}
-                        className="text-blue-500"
-                     />
-                  </div>
-                  <div className="flex justify-start pt-10">
-                     <div className="px-10 text-left min-w-[350px]">
-                        <h2 className="text-2xl ">
-                           Stove, Oven & Cooktop Repair
+                  </a>
+
+                  {/* Stove / Oven */}
+                  <a
+                     href="/stove"
+                     className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden"
+                  >
+                     <div className="flex items-center justify-center py-8 bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
+                        <Microwave
+                           style={{ fontSize: 64 }}
+                           className="text-blue-500"
+                        />
+                     </div>
+                     <div className="flex flex-col flex-1 p-6">
+                        <h2 className="text-xl font-semibold text-gray-800 mb-3">
+                           Stove, Oven &amp; Cooktop Repair
                         </h2>
-                        <p className="text-gray-500 mt-4 max-w-[500px]">
-                           Cooking appliance problems can be a real hassle —
-                           whether your oven won't heat, your stove won't
-                           ignite, or your cooktop isn't responding, we’ve got
-                           you covered. Our skilled technicians repair gas and
-                           electric units of all major brands.
+                        <p className="text-gray-500 text-sm leading-relaxed flex-1">
+                           Oven won&apos;t heat, burner won&apos;t ignite,
+                           cooktop unresponsive? Gas &amp; electric units of
+                           all major brands.
                         </p>
-                        <p className="mt-2 text-blue-500 text-right">
-                           <a href="/washer">
-                              Read more <ArrowRight />
-                           </a>
-                        </p>
+                        <span className="mt-5 inline-flex items-center text-blue-500 font-medium text-sm group-hover:gap-2 transition-all duration-200">
+                           Learn more <ArrowRight fontSize="small" className="ml-1" />
+                        </span>
                      </div>
-                  </div>
+                  </a>
+
                </div>
             </div>
          </div>
