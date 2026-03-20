@@ -1,5 +1,3 @@
-import { APP_CONFIG } from "@/config/config";
-
 export default function Explanations() {
    return (
       <section className="py-10 md:pt-20">

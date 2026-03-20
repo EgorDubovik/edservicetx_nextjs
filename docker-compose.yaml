@@ -1,8 +1,9 @@
 services:
    nextjs:
-      build:
-         context: .
-         dockerfile: ${DOCKER_FILE}
+      # build:
+      #    context: .
+      #    dockerfile: ${DOCKER_FILE}
+      image: childofbelarus/edservice-nextjs:latest
       container_name: nextjs-app
       ports:
          - "3001:3001"
