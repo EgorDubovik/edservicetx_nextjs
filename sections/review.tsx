@@ -64,7 +64,7 @@ export default function Review() {
                                        alt="star"
                                        height={20}
                                     />
-                                 )
+                                 ),
                               )}
                            </div>
                         </div>
@@ -97,7 +97,7 @@ export default function Review() {
                   className="text-blue-700"
                   href="https://www.google.com/maps/place/EDService+Appliance+Repair/@33.1104942,-96.7386956,3641m/data=!3m1!1e3!4m8!3m7!1s0x66e09080ce9a74e5:0x2c5eeb20f98fed68!8m2!3d33.11394!4d-96.7471703!9m1!1b1!16s%2Fg%2F11sjfy8hgx?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D"
                >
-                  Read <b>41</b> more reviews on{" "}
+                  Read <b>179</b> more reviews on{" "}
                </a>
                <Image
                   src={GoogleIcon}

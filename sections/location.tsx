@@ -1,80 +1,62 @@
-import DoneAllIcon from "@mui/icons-material/DoneAll";
 import Location from "../public/repair.png";
 import Image from "next/image";
-import { APP_CONFIG } from "../config/config";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+
+const areas = [
+   "Plano",
+   "McKinney",
+   "Allen",
+   "Frisco",
+   "Fairview",
+   "Prosper",
+   "Melissa",
+   "Little Elm",
+   "The Colony",
+   "Richardson",
+];
 
 export default function LocationSection() {
    return (
-      <section className=" bg-white" id="repairs">
-         <div className="grid grid-cols-1 md:grid-cols-2 bg-[#e6ecf2]">
-            <div>
-               <Image src={Location} alt="Location" height={573} />
+      <section className="overflow-hidden" id="repairs">
+         <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
+            {/* Image */}
+            <div className="relative min-h-[320px] lg:min-h-[520px]">
+               <Image
+                  src={Location}
+                  alt="Service area"
+                  fill
+                  className="object-cover"
+               />
+               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/10 lg:to-white/5" />
             </div>
-            <div>
-               <div className="py-10 w-10/12 mx-auto md:mt-10 ">
-                  <h1 className="text-3xl font-semibold text-center">
-                     We provide services in the following areas
-                  </h1>
-                  <div className="grid grid-cols-2 mt-10">
-                     <div className="text-2xl text-gray-700 gap-y-4 grid grid-rows justify-center">
-                        <p>
-                           <DoneAllIcon style={{ color: "green" }} /> Plano
-                        </p>
-                        <p>
-                           <DoneAllIcon style={{ color: "green" }} /> McKinney
-                        </p>
-                        <p>
-                           <DoneAllIcon style={{ color: "green" }} /> Allen
-                        </p>
-                        <p>
-                           <DoneAllIcon style={{ color: "green" }} /> Frisco
-                        </p>
-                        <p>
-                           <DoneAllIcon style={{ color: "green" }} /> Fairview
-                        </p>
+
+            {/* Content */}
+            <div className="bg-gradient-to-br from-slate-900 to-blue-950 text-white px-8 py-14 lg:px-16 flex flex-col justify-center">
+               <p className="text-blue-400 font-semibold text-sm uppercase tracking-widest mb-3">
+                  Coverage Area
+               </p>
+               <h2 className="text-3xl lg:text-4xl font-bold leading-tight mb-4">
+                  We Serve the
+                  <br />
+                  <span className="text-blue-400">North Dallas</span> Metro
+               </h2>
+               <p className="text-slate-400 mb-10 max-w-sm">
+                  Our technicians are available across the North Dallas area for
+                  fast, reliable service.
+               </p>
+
+               <div className="grid grid-cols-2 gap-3">
+                  {areas.map((area) => (
+                     <div
+                        key={area}
+                        className="flex items-center gap-2.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl px-4 py-2.5 transition-colors duration-200"
+                     >
+                        <span className="w-2 h-2 rounded-full bg-blue-400 flex-shrink-0" />
+                        <span className="text-lg font-medium text-slate-200">
+                           {area}
+                        </span>
                      </div>
-                     <div className="text-2xl text-gray-700 gap-y-4 grid grid-rows justify-center">
-                        <p>
-                           <DoneAllIcon style={{ color: "green" }} /> Prosper
-                        </p>
-                        <p>
-                           <DoneAllIcon style={{ color: "green" }} /> Melissa
-                        </p>
-                        <p>
-                           <DoneAllIcon style={{ color: "green" }} /> Little Elm
-                        </p>
-                        <p>
-                           <DoneAllIcon style={{ color: "green" }} /> The Colony
-                        </p>
-                        <p>
-                           <DoneAllIcon style={{ color: "green" }} /> Richardson
-                        </p>
-                     </div>
-                  </div>
+                  ))}
                </div>
-               {/* <div className="grid grid-cols-1 md:grid-cols-5 justify-center items-center">
-                  <div className="col-span-2 ">
-                     <a
-                        href={APP_CONFIG.BOOK_APP_URL}
-                        className="btn-call text-lg md:text-2xl flex items-center justify-center"
-                     >
-                        <LocalPhoneIcon className="mr-2" />
-                        {APP_CONFIG.PHONE_NUMBER}
-                     </a>
-                  </div>
-
-                  <div className="text-center">Or</div>
-
-                  <div className="col-span-2">
-                     <a
-                        href={APP_CONFIG.BOOK_APP_URL}
-                        className="btn-book text-lg md:text-2xl flex items-center justify-center"
-                     >
-                        Book appointment online
-                     </a>
-                  </div>
-               </div> */}
             </div>
          </div>
       </section>
