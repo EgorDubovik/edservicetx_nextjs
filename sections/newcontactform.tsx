@@ -16,7 +16,7 @@ export default function NewContactForm() {
    const [loadingStatus, setLoadingStatus] = useState("");
 
    const handleInputChange = (
-      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
    ) => {
       const { name, value } = e.target;
       setFormData({ ...formData, [name]: value });
@@ -58,10 +58,7 @@ export default function NewContactForm() {
                      >
                         Contact Us any time
                      </h1>
-                     <p className="py-4 text-gray-500">
-                        We are available 24/7 to help you with any appliance
-                        repair needs.
-                     </p>
+                     <p className="py-4 text-gray-500"></p>
                      <div className="mt-6 grid grid-flow-row gap-y-6">
                         <div className="flex items-center justify-start bg-white rounded px-4 py-2 shadow-md">
                            <Phone

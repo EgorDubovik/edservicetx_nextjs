@@ -8,7 +8,7 @@ const SmallBenefints = () => {
                <div className="flex justify-center">
                   <span className="text-gray-700 font-medium flex items-center">
                      <CheckCircle className="text-green-500 mr-2" />
-                     24/7 Service
+                     Fast & Reliable
                   </span>
                </div>
                <div className="flex justify-center">
