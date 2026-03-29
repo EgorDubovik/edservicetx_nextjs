@@ -1,17 +1,48 @@
-FROM node:18
-
+# === ЭТАП 1: Установка зависимостей ===
+FROM node:18-alpine AS deps
+# Alpine версия гораздо легче (всего 5МБ база)
 WORKDIR /app
 
-COPY package.json ./
-COPY package-lock.json ./
-COPY next.config.ts ./
-COPY postcss.config.mjs ./
-COPY tailwind.config.ts ./
-COPY eslint.config.mjs ./
+# Копируем файлы для установки пакетов
+COPY package.json package-lock.json ./
+# Устанавливаем ВСЕ зависимости (включая devDependencies для билда)
+RUN npm ci 
+# npm ci работает быстрее и строже на CI серверах
 
-RUN npm install
+# === ЭТАП 2: Сборка приложения ===
+FROM node:18-alpine AS builder
+WORKDIR /app
+# Копируем node_modules из первого этапа
+COPY --from=deps /app/node_modules ./node_modules
+# Копируем исходный код
 COPY . .
 
+# Сборка Next.js (компиляция TypeScript, создание .next)
 RUN npm run build
 
+# === ЭТАП 3: Финальный образ (Продакшн) ===
+FROM node:18-alpine AS runner
+WORKDIR /app
+
+# Устанавливаем продакшн окружение
+ENV NODE_ENV=production
+
+# Создаем пользователя, чтобы не запускать от root (безопасность)
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# !!! САМОЕ ВАЖНОЕ: Копируем ТОЛЬКО необходимые файлы !!!
+# Из этапа builder забираем готовый скомпилированный билд
+COPY --from=builder /app/next.config.ts ./
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
+
+# Меняем владельца файлов на созданного пользователя
+USER nextjs
+
+EXPOSE 3000
+
+# Запускаем в продакшн режиме
 CMD ["npm", "run", "start"]

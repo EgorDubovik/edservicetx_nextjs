@@ -3,10 +3,10 @@
 # --- НАСТРОЙКИ ---
 DOCKER_USER="childofbelarus"
 IMAGE_NAME="edservice-nextjs"
-SERVER_USER="bitnami"
-SERVER_IP="18.117.75.47"
-SERVER_PATH="~/htdocs/edservicenextjs.com"
-KEY_PATH="C:/Users/posik/OneDrive/Рабочий стол/My Bad Dreams/.ssh/AmazonLight_server_key.pem"
+SERVER_USER="root"
+SERVER_IP="74.208.249.109"
+SERVER_PATH="~/edservicetx.com"
+KEY_PATH="C:/Users/posik/OneDrive/Рабочий стол/My Bad Dreams/Projects/edservicetxNEXT.loc/.ssh/ci_key"
 
 echo "🚀 Начинаем деплой проекта..."
 

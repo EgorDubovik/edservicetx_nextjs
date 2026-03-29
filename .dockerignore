@@ -1,8 +1,11 @@
 node_modules
 .next
+.env.local
+.env
 .git
 Dockerfile
 docker-compose.yml
 Dockerfile.dev
 Dockerfile.prod
-mysql
+out
+deploy.sh
